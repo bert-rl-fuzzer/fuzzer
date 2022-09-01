@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  tool-pytest:
+    machine: 
+      image: ubuntu-2004:202101-01
+    steps:
+      - checkout
+      - run:
+          name: Initialize and Run pytest container
+          command: |
+            set -x
+            cd docker
+            docker-compose run --rm tool-pytest
+
+workflows:
+  Pipeline:
+    jobs:
+      - tool-pytest

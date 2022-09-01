@@ -1,0 +1,39 @@
+.form_container {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+.search_box_container {
+	border: 2px solid var(--lightgray);
+	max-width: 900px;
+	padding: 30px;
+	border-radius: 0.25rem;
+	margin: 0 auto;
+	background-color: var(--offwhite);
+}
+@media (max-width: 1159px) {
+	.search_box_container {
+		border: 2px solid var(--lightgray);
+		max-width: 500px;
+		padding: 30px;
+		border-radius: 0.25rem;
+		margin: 0 auto;
+		background-color: var(--offwhite);
+	}
+}
+.navbar_search_input {
+	border-radius: 0.35rem;
+}
+.navbar_search_button {
+	border-radius: 0.35rem;
+}
+.navbar_search_button:hover {
+	background-color: var(--offwhite);
+	border: 2px solid var(--darkgray);
+	color: var(--darkgray);
+	border-radius: 0.35rem;
+}
+
+.body_content_container {
+	background-image: url("../images/body_background.jpg");
+	background-repeat: repeat-x repeat-y;
+}

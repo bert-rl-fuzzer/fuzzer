@@ -1,0 +1,14 @@
+{
+    "pass": {
+            "URL-Change":0,
+            "Content-Change":1,
+            "Response-Code":200,
+            "Data-Inputs":["Answer:"]
+        },
+    "fail": {
+            "URL-Change":0,
+            "Content-Change":1,
+            "Response-Code":200,
+            "Data-Inputs":["No","Results","Found"]
+        }
+}

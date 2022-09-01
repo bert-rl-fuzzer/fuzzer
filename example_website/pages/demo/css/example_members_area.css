@@ -1,0 +1,16 @@
+.form_container {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+.members_container {
+	border: 2px solid var(--lightgray);
+	max-width: 500px;
+	padding: 30px;
+	border-radius: 0.25rem;
+	margin: 0 auto;
+	background-color: var(--offwhite);
+}
+.body_content_container {
+	background-image: url("../images/body_background.jpg");
+	background-repeat: repeat-x repeat-y;
+}

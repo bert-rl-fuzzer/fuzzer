@@ -1,0 +1,30 @@
+.form_container {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+.login_container {
+	border: 2px solid var(--lightgray);
+	max-width: 500px;
+	padding: 30px;
+	border-radius: 0.25rem;
+	margin: 0 auto;
+	background-color: var(--offwhite);
+}
+.login_submit_button {
+	background-color: var(--mediumgray);
+	padding: 0.5rem 1rem;
+	color: var(--purewhite);
+	float: right;
+	transition: transform 450ms;
+}
+.login_submit_button:hover {
+	transform: scale(1.05);
+}
+.login_label {
+	font-weight: 600;
+	color: var(--lightgray);
+}
+.body_content_container {
+	background-image: url("../images/body_background.jpg");
+	background-repeat: repeat-x repeat-y;
+}

@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+ python-server:
+  build:
+   context: ../
+   dockerfile: docker/Dockerfile1
+  volumes:
+   - ../python/:/python/
+  entrypoint: ["python", "./python/docker_init.py"]
+  ports:
+   - 3000:3000
+ apache-server:
+  build:
+   context: ../
+   dockerfile: docker/Dockerfile3
+  volumes:
+   - ../pages/:/var/www/html
+  links:
+   - mysql-server:mysql-server
+  ports:
+   - 80:80
+ mysql-server:
+  image: mysql:8.0.23
+  command: --default-authentication-plugin=mysql_native_password --init-file="/tmp/database/schema.sql"
+  volumes:
+   - ../mysql/:/tmp/database/
+  environment:
+   MYSQL_ROOT_PASSWORD: fuzzycrawler@123
+   MYSQL_DATABASE: fuzzycrawler_test
+  ports:
+   - 3306:3306
+ phpmyadmin:
+  depends_on:
+   - mysql-server
+  image: phpmyadmin/phpmyadmin:5.0.1
+  restart: always
+  ports:
+   - "8081:80"
+  environment:
+   PMA_HOST: mysql-server
+   MYSQL_ROOT_PASSWORD: fuzzycrawler@123
+ tool-pytest:
+  build:
+   context: ../
+   dockerfile: docker/Dockerfile2
+  volumes:
+   - ../python/:/project/python/
+   - ../tests/:/project/tests/

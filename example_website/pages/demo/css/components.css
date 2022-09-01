@@ -1,0 +1,130 @@
+/* Colors Variables **STARTS** */
+:root {
+	--black: rgba(0, 0, 0, 0.9);
+	--offwhite: #f8f9fa;
+	--purewhite: #ffffff;
+	--darkgray: #333;
+	--mediumgray: #666;
+	--lightgray: #999;
+}
+/* Colors Variables **ENDS** */
+/* Navbar CSS **STARTS**  */
+body {
+	overflow-x: hidden;
+}
+.navbar_container {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	padding-right: 50px;
+	border-bottom: 3px solid var(--lightgray);
+}
+.navbar_logo {
+	height: 38px;
+	width: auto;
+}
+.navbar_dropdown_container {
+	cursor: pointer;
+}
+.navbar_dropdown {
+	background-color: var(--offwhite);
+}
+.navbar_dropdown_item {
+	transition: all 0.25s;
+	height: 32px;
+	width: 220px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+.navbar_dropdown_item:hover {
+	color: var(--lightgray);
+	font-size: 1.05rem;
+}
+.navbar_link {
+	font-weight: 600;
+	color: var(--lightgray) !important;
+	border-top: 3px solid var(--offwhite);
+	border-bottom: 3px solid var(--offwhite);
+	padding-right: 0.8rem !important;
+	padding-left: 0.8rem !important;
+}
+.navbar_link_active {
+	font-weight: 600;
+	color: var(--darkgray) !important;
+	border-top: 3px solid var(--offwhite);
+	border-bottom: 3px solid var(--offwhite);
+	padding-right: 0.8rem !important;
+	padding-left: 0.8rem !important;
+}
+.navbar_link:hover {
+	border-bottom: 3px solid var(--darkgray);
+}
+.navbar_spacer {
+	height: 64px;
+	width: 100%;
+}
+.navbar_divider_gray {
+	height: 7px;
+	width: 100%;
+	background-color: #999;
+}
+@media screen and (max-width: 991px) {
+	.navbar_container {
+		padding-right: 10px;
+	}
+	.navbar_dropdown {
+		border: none;
+	}
+	.navbar_link {
+		border: none;
+		color: var(--black) !important;
+		font-weight: 400;
+	}
+	.navbar_link_active {
+		border: none;
+		color: var(--black) !important;
+		font-weight: 400;
+		padding-left: 0.5rem !important;
+	}
+	.navbar_link:hover {
+		border: none;
+	}
+	.navbar_dropdown_item {
+		height: auto;
+		width: auto;
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+	.navbar_dropdown_item:hover {
+		color: var(--black);
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 1023px) {
+	/*IPad Pro*/
+	.navbar_link {
+		padding-right: 0.5rem !important;
+		padding-left: 0.5rem !important;
+	}
+}
+/* Navbar CSS **ENDS**  */
+/* Footer CSS **STARTS**   */
+.footer_divider_gray {
+	height: 7px;
+	width: 100%;
+	background-color: #999;
+}
+.footer_copyright_container {
+	padding: 7px 20px;
+	background-color: #101010;
+}
+.footer_copyright_text {
+	color: #999;
+	font-weight: 500;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	width: 100%;
+}
+/* Footer CSS **ENDS** */

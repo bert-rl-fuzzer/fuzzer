@@ -1,0 +1,14 @@
+{
+    "pass": {
+            "URL-Change":1,
+            "Content-Change":1,
+            "Response-Code":200,
+            "Data-Inputs":["Members","Area"]
+        },
+    "fail": {
+            "URL-Change":0,
+            "Content-Change":1,
+            "Response-Code":200,
+            "Data-Inputs":["Invalid","Credentials"]
+        }
+}

@@ -1,0 +1,11 @@
+from FuzzyCrawler_Grammar_Fuzzer import FCGFuzzer
+G2=FCGFuzzer()
+G2.Definition("administrator", ["admin","administrator","Admin","Administrator"])
+G2.Definition("single_Quote", ["'"])
+G2.Definition("apostrophe_OR_Space", [";"," "])
+G2.Definition("comment", [" --"," #"," /*"])
+G2.grammar_input_Parser('C',"administrator")
+G2.grammar_input_Parser('C',"single_Quote")
+G2.grammar_input_Parser('O',"apostrophe_OR_Space")
+G2.grammar_input_Parser('C',"comment")
+G2.grammarFuzzer()
