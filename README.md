@@ -8,7 +8,7 @@ We present a novel tool BertRLFuzzer, a grammar-preserving BERT-based Reinforcem
 2) Go to example_website/docker
 3) On the CLI, execute `docker-compose up`
 
-You will find the following to webpages ready to be tested: 
+You will find the following two webpages: 
 - http://localhost/demo/example_mysql_injection_login.php
 - http://localhost/demo/example_mysql_injection_search_box.php
 
